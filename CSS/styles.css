@@ -1,0 +1,67 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #1f1d2e;
+    color: #e0def4;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: h;
+    background-color: #191724;
+    font-size: 28px;
+    padding-left: 2rem;
+}
+h1 {
+    margin: 0;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    grid-area: s;
+    background-color: #26233a;
+    color: #9ccfd8;
+}
+ul {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: f;
+    background-color: #191724;
+    padding-left: 4rem;
+}
+p {
+    font-family: 'Newsreader', serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 140px 1fr 5rem;
+    grid-template-areas:
+        'h h h'
+        's m m'
+        'f f f';
+    width: 100vw;
+    height: 100vh;
+    min-width: 650px
+}
+.button {
+    text-decoration: none; /* remove later */
+    padding: 1rem;
+}
+.button a {
+    text-decoration: 0;
+    padding-top: 2rem;
+}
+.button a.active {
+    color: #c4a7e7;
+}
+#sidebar_hide {
+    align-self: flex-end;
+    font-size: 30px;
+}

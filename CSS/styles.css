@@ -1,7 +1,9 @@
+
 body {
     font-family: 'Nunito Sans', sans-serif;
     background-color: #1f1d2e;
     color: #e0def4;
+    margin: 0;
 }
 header {
     display: flex;
@@ -20,12 +22,32 @@ aside {
     flex-direction: column;
     grid-area: s;
     background-color: #26233a;
-    color: #9ccfd8;
+}
+section {
+    grid-area: m;
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+    grid-template-areas:'n''b''a';
+}
+nav {
+    align-self: flex-start;
+    grid-area: n;
+    display: flex;
+    justify-content: flex-end;
+}
+article {
+    align-self: center;
+    grid-area: a;
+    display: flex;
+    justify-content: center;
 }
 ul {
     align-self: center;
     margin: 0;
     padding: 0;
+}
+li {
+    display: flex;
 }
 footer {
     display: flex;
@@ -33,35 +55,85 @@ footer {
     justify-content: center;
     grid-area: f;
     background-color: #191724;
+    padding: 1rem;
     padding-left: 4rem;
 }
 p {
     font-family: 'Newsreader', serif;
+    margin: 1rem;
+    color: #6e6a86;
 }
 .container {
     display: grid;
     grid-template-columns: 250px 1fr;
-    grid-template-rows: 140px 1fr 5rem;
+    grid-template-rows: 125px 1fr;
     grid-template-areas:
-        'h h h'
-        's m m'
-        'f f f';
+        'h h'
+        's m'
+        'f f';
     width: 100vw;
     height: 100vh;
     min-width: 650px
 }
+.note_box {
+    background-color: #26233a;
+    min-width: 350px;
+    min-height: 250px;
+    margin-top: 1rem;
+}
+.create_box p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #9ccfd8;
+}
 .button {
+    display: flex;
     text-decoration: none; /* remove later */
-    padding: 1rem;
+    /* padding: 1rem; */
+    color: #9ccfd8;
 }
 .button a {
-    text-decoration: 0;
-    padding-top: 2rem;
+    text-decoration: none;
+    padding: 1rem;
+    color: #9ccfd8;
 }
 .button a.active {
     color: #c4a7e7;
+    font-weight: bold;
 }
 #sidebar_hide {
+    grid-area: b;
+    padding-right: 1rem;
     align-self: flex-end;
     font-size: 30px;
+}
+#column {
+    flex-direction: column;
+}
+#add_symbol {
+    align-self: flex-start;
+    font-size: 50px;
+    padding: 0;
+    padding-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-rows: 125px 1fr;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'h'
+            'm'
+            's'
+            'f';
+    }
+    p, .button {
+        font-size: 20px;
+    }
+    aside {
+        padding-bottom: 5rem;
+    }
+    .note_box {
+        width: 75%;
+    }
+
 }

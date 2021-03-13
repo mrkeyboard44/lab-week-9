@@ -4,7 +4,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Nunito+Sans:wght@300&family=Raleway:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,15 @@
         <header>
             <h1>Note Canister</h1>
         </header>
+        <aside>
+            <div class="button" id="sidebar_hide"><a href="../index.html"><<</a></div>
+            <ul class="button" id="column">
+                <li><a class="active">Untitled Document</a></li>
+                <li><a>Yesterday</a></li>
+                <li><a>The day before</a></li>
+            </ul>
+        </aside>
         <section>
-            <div class="button" id="sidebar_hide"><a href="pages/new_page.html"><<</a></div>
             <nav>
                 <ul class="button">
                     <li><a>Docs</a></li>
@@ -25,8 +32,8 @@
             </nav>
             <article>
                 <div class="button" id="add_symbol">+</div>
-                <div class="create_box">
-                    <p>create a new note</p>
+                <div class="note_box">
+                    <p>your note here</p>
                 </div>
             </article>
         </section>

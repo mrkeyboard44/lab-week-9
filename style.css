@@ -1,0 +1,58 @@
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #1f1d2e;
+    color: #e0def4;
+    margin: 0;
+    min-width: 350px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #191724;
+    font-size: 28px;
+    padding-left: 2rem;
+}
+article {
+    max-width: 800px;
+}
+p {
+    font-family: 'Newsreader', serif;
+    margin: 1rem;
+    color: #e0def4;
+}
+@media screen and (max-width: 650px) {
+    Body {
+        background-color: #c4a7e7;
+    }
+    Header {
+        background-color: #e0def4;
+        color: #191724;
+        font-size: 18px;
+    }
+    Article {
+        background-color: #c4a7e7;
+    }
+    p {
+        font-size: 20px;
+        color: #191724;
+    }
+}
+@media screen and (max-width: 425px) {
+    Body {
+        background-color: #9ccfd8;
+    }
+    Header {
+        background-color: #ebbcba;
+        color: #191724;
+        font-size: 16px;
+    }
+    Article {
+        background-color: #9ccfd8;
+    }
+    p {
+        font-size: 20px;
+        color: #191724;
+    }
+}
